@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Weather Forecast App</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-br from-blue-100 to-blue-300 min-h-screen flex flex-col items-center p-6">
+
+  <!-- Header -->
+  <header class="text-center mb-6">
+    <h1 class="text-4xl font-bold text-blue-700">🌤 Weather Forecast</h1>
+    <p class="text-gray-700">Search weather conditions and 5-day forecast</p>
+  </header>
+
+  <!-- Search -->
+  <div class="flex gap-2 mb-6">
+    <input id="cityInput"
+      type="text"
+      placeholder="Enter city name..."
+      class="border rounded-lg px-4 py-2 w-64 "
+    />
+    <button onclick="getWeather()"
+      class="bg-blue-600 text-white px-5 py-2 rounded-lg hover:bg-blue-700 transition">
+      Search
+    </button>
+  </div>
+
+  <!-- Error -->
+  <p id="error" class="text-red-600 mb-4 hidden"></p>
+
+  <!-- Current Weather -->
+  <section id="weatherCard" class="hidden bg-white shadow-lg rounded-xl p-6 text-center w-96 mb-8">
+    <h2 id="cityName" class="text-2xl font-semibold text-gray-800"></h2>
+    <img id="weatherIcon" class="mx-auto my-3" alt="Weather Icon">
+    <p id="description" class="capitalize text-gray-600 mb-2"></p>
+    <p id="temperature" class="text-3xl font-bold text-blue-600"></p>
+    <div class="mt-4 grid grid-cols-2 gap-2 text-gray-700 text-sm">
+      <p id="humidity"></p>
+      <p id="wind"></p>
+      <p id="pressure"></p>
+      <p id="clouds"></p>
+      <p id="sunrise" class="col-span-2"></p>
+      <p id="sunset" class="col-span-2"></p>
+    </div>
+  </section>
+
+  <!-- Forecast -->
+  <section id="forecastSection" class="hidden w-full max-w-5xl">
+    <h3 class="text-xl font-semibold text-gray-800 mb-4">5-Day Forecast</h3>
+    <div id="forecastCards" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-4">
+      <!-- forecast cards injected here -->
+    </div>
+  </section>
+
+  <script src="app.js"></script>
+</body>
+</html>
