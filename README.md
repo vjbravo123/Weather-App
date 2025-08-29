@@ -31,7 +31,7 @@ It uses the **OpenWeatherMap API** to fetch real-time weather data and displays 
 ## 🚀 Getting Started
 
 ### 1. Clone the Repository
-    git clone https://github.com/your-username/weather-forecast-app.git
+    git clone https://github.com/vjbravo123/weather-forecast-app.git
     cd weather-forecast-app
 
 ### 2. Open the Project
